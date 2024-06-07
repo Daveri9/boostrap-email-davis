@@ -1,0 +1,8 @@
+#email-list-group {
+    max-height: calc(3 * 80px);
+    overflow-y: auto;
+}
+
+.list-group-item {
+    height: 100px;
+}
