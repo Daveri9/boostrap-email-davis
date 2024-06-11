@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Email Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- top/nav bar section -->
+        <div class="row">
+            <div class="navbar">
+                <!-- search box -->
+                <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search Emails..." aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit"> Search 🔎</button>
+                    </form>
+                    <!-- offcanvas nav (disappears on xl screens) -->
+                    <button class="navbar-toggler d-block d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Snail Mail</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Inbox</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sent</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Drafts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Spam</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Trash</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"> Help</a></li>
+                                        <li><a class="dropdown-item" href="#">Display & Appearance</a></li>
+                                        <li><a class="dropdown-item" href="#">Account(s)</a></li>
+                                        <hr class="dropdown-divider">
+                                        <li>
+                                            <div class="text-center">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SignOutModal">Sign Out</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal for sign out message -->
+                <div class="modal fade" id="SignOutModal" tabindex="-1" aria-labelledby="SignOutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="SignOutModalLabel">Sign Out</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are You Sure You Want To Sign Out?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Sign Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main content sections -->
+        <div class="row">
+            <!-- folder section -->
+            <div class="col-12 col-xl-2 d-none d-xl-flex">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" aria-current="page" href="#">Inbox</a>
+                    <a class="nav-link">Sent</a>
+                    <a class="nav-link">Drafts</a>
+                    <a class="nav-link">Spam</a>
+                    <a class="nav-link">Trash</a>
+                  </nav>
+            </div>
+            <!-- messages section -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <!-- compose button -->
+                <div class="d-grid gap-2 col- mx-auto">
+                    <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#ComposeModal"> Compose</button>
+                  </div>
+                  <!-- compose modal -->
+                  <div class="modal fade" id="ComposeModal" tabindex="-1" aria-labelledby="ComposeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                  </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label"> Compose Email</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <h5>Inbox</h5>
+                </div>
+                    <!-- email list -->
+                <div class="list-group" id="email-list-group">
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Snail Mail</h5>
+                            <small>now</small>
+                        </div>
+                        <p class="mb-1">We've <strong>UPDATED</strong> our policies!</p>
+                        <small>Check out our new policies now...</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Vacation Getaway</h5>
+                            <small class="text-body-secondary">5 mins ago</small>
+                        </div>
+                        <p class="mb-1">You're Our Lucky Winner! Claim Your Dream Vacation Now!</p>
+                        <small class="text-body-secondary">Dear Lucky Winner,</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">PrettyLittleThing</h5>
+                            <small class="text-body-secondary">1 day ago</small>
+                        </div>
+                        <p class="mb-1">Ready to have a hot girl summer? ☀️ 🥵</p>
+                        <small class="text-body-secondary">Shop SWIMWEAR sets starting at $10 👙<br></small>
+                    </a>
+                </div>
+            </div>
+
+            <!-- opened email section -->
+            <div class="col-12 col-md-6 col-xl-6">
+                <h1>Vacation Getaway</h1>
+                <p>from: freevacation@totallynotascam.com</p>
+                <br>
+                <p>You're Our Lucky Winner! Claim Your Dream Vacation Now!</p>
+                <br>
+                <p>Dear Lucky Winner,</p>
+                <p>Congratulations! You've won a dream vacation package to the exotic destination of your choice! 
+                    <br>Click <a href="#" class="link-underline-danger">[CLAIM YOUR PRIZE]</a> to redeem your tickets now!
+                    <br>
+                </p>
+                <p>Your package includes:</p>
+                <p>✈️ Round-trip airfare for two <br> 🏨 7 nights with luxury accommodations <br> 🍹 Exclusive island excursions <br> 💰 $5,000 spending money</p>
+                <div class="text-center">
+                <img src="https://media.istockphoto.com/id/157834378/photo/tropical-beach.jpg?s=1024x1024&w=is&k=20&c=C_kbx_oak9eyuPvpp3d3Uujkm7xBGNmRdyw4-vX_e9A=" class="rounded">
+            </div>
+                <p>To claim your prize, simply reply to this email with your full name, address, and phone number. Act fast! This offer expires in 24 hours!</p>
+                <br>
+                <p>Best Regards,<br>Vacation Getaway Team</p>
+
+                <!-- reply section -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Reply here..." aria-label="Text input with segmented dropdown button">
+                    <button type="button" class="btn btn-outline-secondary">Reply</button>
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Reply All</a></li>
+                        <li><a class="dropdown-item" href="#">Forward</a></li>
+                        <li><a class="dropdown-item" href="#">Flag</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Move to Trash</a></li>
+                      </ul>
+                    </div>
+<!-- bootstrap java -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
