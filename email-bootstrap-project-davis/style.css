@@ -1,0 +1,150 @@
+body {
+    background-color: #e9dff6;
+}
+ h5{
+    color:rgb(38, 18, 59)
+ }
+/* top section */
+.navbar {
+    background-color: #72579F;
+}
+
+/* search */
+.search-box {
+    background-color: #cEBBED;
+    border-color: #1b0236;}
+
+.search-btn {
+    background-color: #8B6BBF;
+    border-color: #1b0236;
+}
+.search-btn:hover {
+    background-color: #cEBBED;
+    border-color: #1b0236;
+}
+
+/* offcanvas nav */
+.navbar-toggler {
+    background-color: #52307C;
+    border-color: #1b0236;
+    height: 60px;
+    width: 70px;
+}
+
+.offcanvas-body {
+    background-color: #9D85C3;
+}
+
+.offcanvas-header {
+    background-color:#e9dff6;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+.mail-name{
+    font-size: 35px; 
+}
+.snail{
+    height: 175px;
+    align-items:flex-end;
+    padding-top: 18px;
+}
+.dropdown-menu {
+    background-color: #f8f6fc;
+}
+
+/* folder section */
+.folder-header {
+    background-color: #e9dff6;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.folder-mail-name {
+    font-size: 25px;
+}
+.folder-snail{
+    height: 100px;
+    padding-top: 10px;
+}   
+
+.folder-container {
+    background-color: #9D85C3;
+    display: flex;
+}
+.col-12.col-xl-2 {
+    padding-left: 0;
+}
+.folder-content .nav-link {
+    color: #050505; 
+    font-size: 20px;
+}
+
+.folder-content .nav-link:hover {
+    color: #dbc2ea; 
+}
+
+.dropdown-menu{
+    background-color: #52307C;
+}
+.signout-btn{
+    color: white;
+    background-color: #52307C;
+}
+.signout-btn:hover{
+    background-color: #7b55ad;
+    color:#fffffe;
+}
+
+/* messages  */
+
+/* compose button - FINISHED OFF HERE!!!*/
+.compose-btn {
+    background-color: #623797;  
+    margin:10px;
+    border-radius: 5px;
+    height: 45px;
+}
+.compose-btn:hover {
+    background-color: #8866b2;
+    color: white;
+}
+.modal-content-compose {
+    background-color: #8866b2;
+    border-radius: 5px;
+
+}
+
+.mb-3 {
+    color: #2f1b46;
+}
+
+
+
+
+/* sign out modal */
+.modal-content {
+    background-color: #cEBBED;
+}
+
+.modal-title {
+    color: rgb(38, 18, 59);
+}
+
+.modal-body {
+    font-size: 30px;
+    color: rgb(38, 18, 59);
+}
+
+.close-btn {
+    color:white;
+    background-color: #8B6BBF;
+}
+.signout-btn-2 {
+    color: white;
+    background-color: #8B6BBF;
+}
