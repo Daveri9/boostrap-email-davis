@@ -142,8 +142,8 @@
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                   </div>
                                   <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Send</button>
+                                    <button type="button" class="btn compose-close-btn" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn send-btn">Send</button>
                                   </div>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                         <p class="mb-1">We've <strong>UPDATED</strong> our policies!</p>
                         <small>Check out our new policies now...</small>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action active">
+                    <a href="#" class="list-group-item list-group-item-action  opened-email active">
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1">Vacation Getaway</h5>
                             <small class="text-body-secondary">5 mins ago</small>
@@ -182,7 +182,7 @@
             </div>
 
             <!-- opened email section -->
-            <div class="col-12 col-md-6 col-xl-6">
+            <div class="col-12 col-md-6 col-xl-6 open-email">
                 <h1>Vacation Getaway</h1>
                 <p>from: freevacation@totallynotascam.com</p>
                 <br>
@@ -196,8 +196,9 @@
                 <p>Your package includes:</p>
                 <p>✈️ Round-trip airfare for two <br> 🏨 7 nights with luxury accommodations <br> 🍹 Exclusive island excursions <br> 💰 $5,000 spending money</p>
                 <div class="text-center">
-                <img src="https://media.istockphoto.com/id/157834378/photo/tropical-beach.jpg?s=1024x1024&w=is&k=20&c=C_kbx_oak9eyuPvpp3d3Uujkm7xBGNmRdyw4-vX_e9A=" class="rounded">
+                <img src="https://media.istockphoto.com/id/157834378/photo/tropical-beach.jpg?s=1024x1024&w=is&k=20&c=C_kbx_oak9eyuPvpp3d3Uujkm7xBGNmRdyw4-vX_e9A=" class="vaca-img">
             </div>
+                    <br>
                 <p>To claim your prize, simply reply to this email with your full name, address, and phone number. Act fast! This offer expires in 24 hours!</p>
                 <br>
                 <p>Best Regards,<br>Vacation Getaway Team</p>
@@ -205,14 +206,14 @@
                 <!-- reply section -->
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Reply here..." aria-label="Text input with segmented dropdown button">
-                    <button type="button" class="btn btn-outline-secondary">Reply</button>
-                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-outline reply-btn">Reply</button>
+                    <button type="button" class="btn  dropdown-toggle dropdown-toggle-split reply-btn-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Reply All</a></li>
-                        <li><a class="dropdown-item" href="#">Forward</a></li>
-                        <li><a class="dropdown-item" href="#">Flag</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end reply-dropdown">
+                        <li><a class="dropdown-item">Reply All</a></li>
+                        <li><a class="dropdown-item">Forward</a></li>
+                        <li><a class="dropdown-item">Flag</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Move to Trash</a></li>
                       </ul>

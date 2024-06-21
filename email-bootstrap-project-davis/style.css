@@ -49,9 +49,6 @@ body {
     align-items:flex-end;
     padding-top: 18px;
 }
-.dropdown-menu {
-    background-color: #f8f6fc;
-}
 
 /* folder section */
 .folder-header {
@@ -80,8 +77,8 @@ body {
     padding-left: 0;
 }
 .folder-content .nav-link {
-    color: #050505; 
     font-size: 20px;
+    color: #1b0236;
 }
 
 .folder-content .nav-link:hover {
@@ -89,22 +86,20 @@ body {
 }
 
 .dropdown-menu{
-    background-color: #52307C;
+    background-color: #583d79;
 }
 .signout-btn{
     color: white;
-    background-color: #52307C;
+    background-color: #583d79;
 }
 .signout-btn:hover{
-    background-color: #7b55ad;
+    background-color: #624685;
     color:#fffffe;
 }
 
-/* messages  */
-
-/* compose button - FINISHED OFF HERE!!!*/
+/* compose button */
 .compose-btn {
-    background-color: #623797;  
+    background-color: #6c4d92;  
     margin:10px;
     border-radius: 5px;
     height: 45px;
@@ -123,7 +118,48 @@ body {
     color: #2f1b46;
 }
 
+.compose-close-btn {
+    color:#611bac;
+    background-color: white;
 
+}
+.send-btn {
+    color:#611bac;
+    background-color: white;
+}
+
+
+/* emails list */
+.opened-email.active {
+    background-color: #c8b8dc;
+    border-color: #1b0236;
+}
+
+/* opened email */
+
+.open-email {
+    background-color: #d0c1e3;
+}
+
+.vaca-img {
+    height: 300px;
+    width: 600px;
+}
+
+/* reply section */
+.reply-btn {
+    background-color: #8B6BBF;
+}
+.reply-btn:hover {
+    background-color: #775ba4;
+}
+.reply-btn-dropdown {
+    background-color: #8B6BBF;
+    border:5px;
+}
+.reply-btn-dropdown:hover {
+    background-color: #775ba4;
+}
 
 
 /* sign out modal */
